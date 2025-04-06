@@ -1,0 +1,293 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px; /* Spazio sopra per evitare che il contenuto si sovrapponga all'immagine */
+}
+
+header {
+    background-color: #f3f4f6;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none;
+    margin-bottom: 5px;
+    position: relative; /* Mantiene il posizionamento corretto dell'immagine */
+}
+
+h1 {
+    font-size: 35px;
+    color: #1a3e9e;
+    font-weight: 700;
+    margin: 0;
+}
+
+#refreshImage {
+    width: 24px; /* Imposta la larghezza dell'immagine */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    cursor: pointer;
+    position: absolute; /* Posiziona l'immagine rispetto al contenitore */
+    top: 10px; /* Distanza dal bordo superiore */
+    right: 20px; /* Distanza dal bordo destro */
+}
+
+main {
+    padding: 0 20px;
+    background-color: #f3f4f6;
+    margin-top: 50px; /* Sposta tutto il contenuto verso il basso */
+}
+
+h2 {
+    font-size: 18px;
+    color: #000;
+    font-weight: 400;
+    margin-top: 9px;
+}
+
+/* Stile del biglietto scelto con bordo giallo */
+.ticket-card {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #fede00;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-info {
+    background-color: #fff;
+    padding: 15px;
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket-info h3 {
+    font-size: 25px;
+    color: #1a3e9e;
+    font-weight: 500;
+    margin: 0;
+}
+
+.info-button-image {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.info-button-image img {
+    width: 20px; /* Imposta la larghezza dell'immagine del pulsante */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+}
+
+/* Sezione immagine, pulsante e testo affiancato */
+.ticket-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.ticket-content img {
+    width: 130px;
+    height: auto;
+    margin-top: 5px;
+}
+
+.button-image {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0; /* Rimuove il padding */
+}
+
+.button-image img {
+    width: 50px; /* Imposta la larghezza dell'immagine del pulsante */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    margin: 0 20px; /* Aggiungi margine per spazio laterale */
+}
+
+.tornello-text {
+    text-align: right;
+    flex: 1;
+}
+
+.bippami-text {
+    text-align: center;
+    margin: 0;
+    font-size: 10px;
+    font-weight: 100;
+}
+
+.bippami-text br {
+    content: "";
+    margin: 0;
+}
+
+
+/* Sezione Validato con sfondo blu */
+.ticket-validato {
+    background-color: #1a3e9e;
+    margin-top: 10px;
+    color: #fede00; /* Cambia il colore del testo a giallo */
+    padding: 12px 15px;
+    display: flex;
+    align-items: center; /* Allinea tutto sulla stessa riga */
+    border-radius: 0 0 10px 10px;
+}
+
+.ticket-validato h4 {
+    font-size: 20px;
+    color: #fede00; /* Cambia il colore del testo a giallo */
+    font-weight: 600;
+    margin: 0;
+    margin-right: 47px; /* Spazio a destra tra il titolo e le date */
+}
+
+.ticket-validato .date-info {
+    display: flex;
+    align-items: center; /* Allinea verticalmente gli elementi */
+    font-size: 14px;
+    color: #fff;
+    margin-left: 15px; /* Spazio a sinistra tra il titolo e le date */
+}
+
+.date-info span {
+    margin-right: 37px; /* Spazio a destra per ogni elemento */
+}
+
+.fino-al {
+    font-weight: 100;
+    margin-top: 5px;
+    font-size: 10px;
+    white-space: nowrap; /* Impedisce la divisione del testo su più righe */
+}
+
+
+.data, .ora {
+    font-weight: 400;
+}
+
+/* Riduci la dimensione del font per "Fino al" */
+.fino-al {
+    font-size: 10px; /* Mantieni la dimensione del font uniforme */
+}
+
+.data, .ora {
+    font-size: 15px; /* Mantieni la dimensione del font uniforme */
+}
+
+/* Contenitore per lo sfondo bianco */
+/* Contenitore per lo sfondo bianco */
+.acquista-button-wrapper {
+    position: fixed;
+    bottom: 80px; /* Distanza dal fondo della pagina, lascia spazio per il footer */
+    left: 0; /* Allinea a sinistra */
+    right: 0; /* Allinea a destra */
+    background-color: #fff; /* Sfondo bianco */
+    padding: 20px; /* Aumenta il padding per rendere lo sfondo più largo */
+    border-radius: 10px 10px 0 0; /* Bordi arrotondati solo in alto */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Ombra sulla parte superiore */
+    text-align: center; /* Centra il contenuto orizzontalmente */
+    z-index: 1000; /* Assicura che il contenitore sia sopra altri elementi */
+    width: calc(100% - 40px); /* Riduce la larghezza per tenere conto del padding laterale */
+    margin: 0 auto; /* Centra il contenitore orizzontalmente */
+}
+
+/* Pulsante "Acquista Biglietto" */
+#acquistaButton {
+    background-color: #fede00; /* Colore di sfondo giallo */
+    color: #1a3e9e; /* Colore del testo blu */
+    padding: 15px 20px; /* Spaziatura interna */
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px; /* Bordi arrotondati del pulsante */
+    width: 100%; /* Larghezza del pulsante al 100% del contenitore */
+    max-width: 460px; /* Imposta una larghezza massima se necessario */
+    display: inline-block; /* Adatta la larghezza del pulsante */
+}
+
+
+footer {
+    background-color: #1a3e9e;
+    color: #fff;
+    padding: 10px;
+    padding-bottom: 70px; /* Aggiungi spazio vuoto sotto il footer */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end; /* Allinea le icone verso il basso */
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -38px;
+    margin-left: 20px;
+}
+
+.footer-icon {
+    width: 20px; /* Imposta la larghezza delle icone */
+    height: auto; /* Mantiene le proporzioni delle icone */
+    cursor: pointer;
+}
+
+
+.footer-item span {
+    font-size: 9px; /* Dimensione del testo */
+    color: #fff; /* Colore del testo */
+    margin-top: 5px; /* Spazio tra l'icona e il testo */
+}
+
+/* Overlay per lo schermo di caricamento */
+.loading-overlay {
+    display: none; /* Nascondi di default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscura la pagina al 50% */
+    z-index: 2000; /* Assicurati che sia sopra altri elementi */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Stile per il contenitore dell'icona di caricamento */
+.loading-spinner {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Aggiungi l'animazione di rotazione */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner img {
+    width: 35px;
+    height: auto;
+    animation: rotate 1.3s linear infinite; /* Applica l'animazione di rotazione */
+}
+

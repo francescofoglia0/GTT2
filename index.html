@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO Move</title>
+    
+    <!-- Metatag per iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="TO Move">
+    <link rel="apple-touch-icon" href="path-to-your-icon.png">
+    <meta name="theme-color" content="#f3f4f6">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Biglietti</h1>
+        <img id="refreshImage" src="path-to-your-image.jpg" alt="Aggiorna" />
+    </header>
+    
+    <main>
+        <section id="bigliettiDisponibili">
+            <h2>BIGLIETTO SCELTO</h2>
+            <div class="ticket-card">
+                <!-- Sezione City -->
+                <div class="ticket-info">
+                    <div class="info-header">
+                        <h3>City</h3>
+                        <button id="infoButtonImage" class="info-button-image">
+                            <img src="path-to-your-info-button-image.jpg" alt="Info">
+                        </button>
+                    </div>
+                    <div class="ticket-content">
+                        <img src="ticket-image.jpg" alt="Biglietto City">
+                        <button id="buttonImage" class="button-image">
+                            <img src="path-to-your-button-image.jpg" alt="Pulsante">
+                        </button>
+                        <div class="tornello-text">
+                            <p class="bippami-text">
+                                Bippami al validatore o al<br>
+                                <span class="bippami-text">tornello</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Sezione Validato, unita con la precedente, ma sfondo blu -->
+                <div class="ticket-validato">
+                    <h4>Validato</h4>
+                    <div class="date-info">
+                        <span class="fino-al">Fino al</span>
+                        <span class="data">--/--/--</span>
+                        <span class="ora">--:--:--</span>
+                    </div>
+                </div>                                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Contenitore per il pulsante con sfondo bianco -->
+        <div class="acquista-button-wrapper">
+            <button id="acquistaButton">ACQUISTA BIGLIETTO</button>
+        </div>
+
+        <a>
+            <div class="footer-item">
+                <img src="path-to-your-biglietti-image.png" alt="Biglietti" class="footer-icon">
+                <span style="color:#fede00">Biglietti</span>
+            </div>
+        </a>
+        <a>
+            <div class="footer-item">
+                <img src="path-to-your-infomobilita-image.png" alt="Infomobilità" class="footer-icon">
+                <span style="color: #868097;">Infomobilità</span>
+            </div>
+        </a>
+        <a>
+            <div class="footer-item">
+                <img src="path-to-your-impostazioni-image.png" alt="Impostazioni" class="footer-icon">
+                <span style="color:#868097">Impostazioni</span>
+            </div>
+        </a>
+        
+    </footer>
+
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <img src="path-to-loading-icon.png" alt="Caricamento...">
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricevuta di Vendita</title>
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Aggiunge la modalità a schermo intero su iOS -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- Opzionale: Cambia lo stile della status bar -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            white-space: nowrap;
+            margin: 5 5;
+            height: 120vh; /* Altezza del viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0; /* Sfondo grigio chiaro */
+        }
+
+        .ricevuta {
+            width: 100vw; /* Larghezza del viewport */
+            height: 100vh; /* Altezza del viewport */
+            max-width: none; /* Disabilita il limite massimo di larghezza */
+            max-height: calc(100vh - 40px); /* Disabilita il limite massimo di altezza */
+            padding: 20px;
+            background-color: #fff; /* Sfondo bianco del foglio */
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Ombra solo sulla parte superiore */
+            overflow-y: auto; /* Abilita lo scrolling se necessario */
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column; /* Dispone gli elementi in colonna */
+            align-items: center; /* Centra gli elementi orizzontalmente */
+            padding: 20px;
+        }
+        
+        .ricevuta img {
+            display: block;
+            width: 130px;
+            height: auto;
+            margin: 0 10px; /* Centra l'immagine orizzontalmente */
+        }
+
+        .info {
+            position: static; /* Rimuove il posizionamento assoluto */
+            margin: 0 auto; /* Centra gli elementi */
+            width: 90%; /* Adatta la larghezza al contenitore */
+            text-align: left; /* Allinea il testo a sinistra */
+        }
+
+        .info p {
+            word-wrap: break-word; /* Permette la divisione delle parole lunghe */
+            font-size: 1em; /* Adatta la dimensione del font */
+            margin-bottom: 10px; /* Spazio tra i paragrafi */
+        }
+
+        .large-font {
+            font-size: 1.2em; /* Dimensione maggiore per i testi importanti */
+        }
+
+        .altro-font {
+            font-size: 0.8em; /* Dimensione font ridotta */
+        }
+        .ultimo-font{
+            font-size: 0.9em; /* Dimensione leggermente più piccola */
+        }
+
+        @media (max-width: 768px) {
+            .info {
+                width: 100%; /* Adatta la larghezza per schermi piccoli */
+            }
+
+            .large-font {
+                font-size: 1em; /* Riduci la dimensione del font su schermi piccoli */
+            }
+
+            .ultimo-font {
+                font-size: 0.8em; /* Riduci ulteriormente la dimensione */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="ricevuta">
+        <img src="logo-gtt.png" alt="Logo" style="max-height: 100px;"> <!-- Aggiungi qui l'URL dell'immagine -->
+        <div class="info" style="margin-top: 90px;">
+            <p class="altro-font">RICEVUTA DI VENDITA</p>
+            <p class="altro-font">GTT SpA SpA</p>
+            <p class="altro-font">P.IVA 08559940013</p>
+            <p class="ultimo-font">Corso Filippo Turati 19/6</p>
+            <p class="ultimo-font">10128 Torino TO</p>
+            <p class="ultimo-font">Numero nero 011-0672000</p>
+            <p class="ultimo-font">Numero verde: 800-019152</p>
+        </div>
+        <div class="info" style="top: 27%; left: 0;">
+            <p class="large-font">Data acquisto: <span id="dataAcquisto"></span></p>
+            <p class="ultimo-font">--------------------------------</p>
+            <p class="ultimo-font">Seriale biglietto: 38015698536817630</p>
+            <p class="ultimo-font">Seriale contratto: AE110BE2-02364750</p>
+            <p class="ultimo-font">Codice tariffa: GTT 771</p>
+            <p class="ultimo-font">Descrizione tariffa: City su APP</p>
+            <p class="ultimo-font">Prezzo singolo: 1,90 euro</p>
+            <p class="ultimo-font">--------------------------------</p>
+            <p class="large-font">Importo totale pagato: 1,90 euro</p>
+            <p class="large-font">Modo pagamento: Carta Bancaria</p>
+            <p class="large-font">Codice ordine pagamento: AGTTiOSA7605328650890</p>
+            <p class="ultimo-font">--------------------------------</p>
+            <p class="large-font">Arrivederci e Grazie</p>
+        </div>
+    </div>
+
+    <script>
+        // Funzione per aggiornare la data di acquisto con la data attuale
+        function aggiornaData() {
+            const now = new Date();
+            const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+            const dataAcquisto = now.toLocaleDateString('it-IT', options);
+
+            document.getElementById('dataAcquisto').textContent = dataAcquisto;
+        }
+
+        // Aggiorna la data al caricamento della pagina
+        window.onload = aggiornaData;
+    </script>
+</body>
+</html>
