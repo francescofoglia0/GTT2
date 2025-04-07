@@ -29,10 +29,10 @@
             overflow-y: auto; /* Abilita lo scrolling se necessario */
             overflow-x: hidden;
             position: relative;
-            display: flex;
-            flex-direction: column; /* Dispone gli elementi in colonna */
-            align-items: center; /* Centra gli elementi orizzontalmente */
-            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr; /* Una sola colonna */
+            grid-template-rows: auto auto; /* Righe auto adattive */
+            gap: 10px; /* Spazio tra gli elementi */
         }
         
         .ricevuta img {
@@ -43,41 +43,28 @@
         }
 
         .info {
-            position: static; /* Rimuove il posizionamento assoluto */
-            margin: 0 auto; /* Centra gli elementi */
-            width: 90%; /* Adatta la larghezza al contenitore */
-            text-align: left; /* Allinea il testo a sinistra */
+             /* Spazio tra l'immagine e il testo */
+            line-height: 1.4;
+            width: 25%; /* Occupa circa 1/4 della larghezza del foglio */
+            position: absolute;
+            margin-left: 30px;
+            top: 0;
+            left: 0;
         }
 
         .info p {
-            word-wrap: break-word; /* Permette la divisione delle parole lunghe */
-            font-size: 1em; /* Adatta la dimensione del font */
-            margin-bottom: 10px; /* Spazio tra i paragrafi */
+            margin: 0;
         }
 
         .large-font {
-            font-size: 1.2em; /* Dimensione maggiore per i testi importanti */
+            font-size: 0.7em; /* Dimensione font ridotta */
         }
 
         .altro-font {
             font-size: 0.8em; /* Dimensione font ridotta */
         }
         .ultimo-font{
-            font-size: 0.9em; /* Dimensione leggermente più piccola */
-        }
-
-        @media (max-width: 768px) {
-            .info {
-                width: 100%; /* Adatta la larghezza per schermi piccoli */
-            }
-
-            .large-font {
-                font-size: 1em; /* Riduci la dimensione del font su schermi piccoli */
-            }
-
-            .ultimo-font {
-                font-size: 0.8em; /* Riduci ulteriormente la dimensione */
-            }
+            font-size: 0.4em;
         }
 
     </style>
