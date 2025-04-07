@@ -161,6 +161,9 @@ h2 {
     font-size: 14px;
     color: #fff;
     white-space: nowrap; /* Impedisce che il testo vada a capo */
+    gap: 5px; /* Spaziatura dinamica tra gli elementi */
+    margin: 0; /* Rimuove margini inutili */
+    padding: 0; /* Rimuove padding inutili */
 }
 
 .date-info span {
@@ -169,6 +172,8 @@ h2 {
     white-space: nowrap; /* Impedisce che il testo vada a capo */
     overflow: hidden; /* Nasconde il contenuto in eccesso */
     text-overflow: ellipsis; /* Aggiunge "..." se il contenuto è troppo lungo */
+    margin: 0; /* Rimuove margini tra gli elementi */
+    padding: 0; /* Rimuove padding tra gli elementi */
 }
 
 .fino-al {
