@@ -1,7 +1,7 @@
-document.getElementById('buttonImage').addEventListener('click', function() {
+/*document.getElementById('buttonImage').addEventListener('click', function() {
     window.open('ricevuta.html', '_blank');
 });
-
+*/
 document.addEventListener('DOMContentLoaded', function() {
     // Funzione per aggiornare la data e l'ora
     function aggiornaDataEOra() {
