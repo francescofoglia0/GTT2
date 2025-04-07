@@ -95,7 +95,20 @@
         </div>
     </div>
     
+    <button onclick="location.hash = 'ricevuta';">Vai alla Ricevuta</button>
 
     <script src="script.js"></script>
+    <script>
+        window.addEventListener('hashchange', () => {
+            if (location.hash === '#ricevuta') {
+                fetch('ricevuta.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.body.innerHTML = html;
+                    })
+                    .catch(error => console.error('Errore nel caricamento della pagina Ricevuta:', error));
+            }
+        });
+    </script>
 </body>
 </html>
