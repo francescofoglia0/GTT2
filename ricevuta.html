@@ -118,13 +118,7 @@
         // Aggiorna la data al caricamento della pagina
         window.onload = aggiornaData;
     </script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./service-worker.js')
-                .then(() => console.log('Service Worker registrato'))
-                .catch((error) => console.error('Errore nella registrazione del Service Worker:', error));
-        }
-    </script>
+
     <script>
         // Funzione per entrare in modalità a schermo intero
         function abilitaSchermoIntero() {
