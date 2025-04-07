@@ -140,7 +140,8 @@ h2 {
     color: #fede00; /* Cambia il colore del testo a giallo */
     padding: 12px 15px;
     display: flex;
-    align-items: center; /* Allinea tutto sulla stessa riga */
+    flex-direction: column; /* Dispone gli elementi in colonna */
+    align-items: center; /* Centra gli elementi orizzontalmente */
     border-radius: 0 0 10px 10px;
 }
 
@@ -149,19 +150,22 @@ h2 {
     color: #fede00; /* Cambia il colore del testo a giallo */
     font-weight: 600;
     margin: 0;
-    margin-right: 47px; /* Spazio a destra tra il titolo e le date */
+    margin-bottom: 10px; /* Spazio sotto il titolo */
 }
 
 .ticket-validato .date-info {
     display: flex;
+    justify-content: space-between; /* Distribuisce gli elementi in modo uniforme */
     align-items: center; /* Allinea verticalmente gli elementi */
+    width: 100%; /* Occupa tutta la larghezza disponibile */
     font-size: 14px;
     color: #fff;
-    margin-left: 15px; /* Spazio a sinistra tra il titolo e le date */
 }
 
 .date-info span {
-    margin-right: 37px; /* Spazio a destra per ogni elemento */
+    flex: 1; /* Gli elementi occupano lo stesso spazio */
+    text-align: center; /* Centra il testo */
+    white-space: nowrap; /* Impedisce che il testo vada a capo */
 }
 
 .fino-al {
