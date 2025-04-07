@@ -121,6 +121,9 @@
                         aggiornaData();
                     })
                     .catch(error => console.error('Errore nel caricamento della pagina Ricevuta:', error));
+            } else {
+                // Ricarica la pagina index.html quando l'hash non è più #ricevuta
+                location.reload();
             }
         });
     </script>
