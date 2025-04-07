@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ricevuta di Vendita</title>
-    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Aggiunge la modalità a schermo intero su iOS -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- Opzionale: Cambia lo stile della status bar -->
+    
+    <!-- Per iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="logo-gtt.png"> <!-- Icona per iOS -->
+
+    <!-- Per Android -->
+    <link rel="manifest" href="manifest2.json">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -83,7 +89,7 @@
             
         </div>
         <div class="info" style="top: 27%; left: 0;">
-            <p class="large-font" style="margin-top: 30px;">Data acquisto: <span id="dataAcquisto"></span></p>
+            <p class="large-font" style="margin-top: 40px;">Data acquisto: <span id="dataAcquisto"></span></p>
             <p class="ultimo-font">--------------------------------</p>
             <p class="ultimo-font">Seriale biglietto: 38015698536817630</p>
             <p class="ultimo-font">Seriale contratto: AE110BE2-02364750</p>
@@ -111,6 +117,13 @@
 
         // Aggiorna la data al caricamento della pagina
         window.onload = aggiornaData;
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js')
+                .then(() => console.log('Service Worker registrato'))
+                .catch((error) => console.error('Errore nella registrazione del Service Worker:', error));
+        }
     </script>
 </body>
 </html>
