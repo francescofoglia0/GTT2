@@ -35,7 +35,7 @@
                     </div>
                     <div class="ticket-content">
                         <img src="ticket-image.jpg" alt="Biglietto City">
-                        <button id="buttonImage" class="button-image">
+                        <button onclick="location.hash = 'ricevuta';" id="buttonImage" class="button-image">
                             <img src="path-to-your-button-image.jpg" alt="Pulsante">
                         </button>
                         <div class="tornello-text">
@@ -95,8 +95,6 @@
         </div>
     </div>
     
-    <button onclick="location.hash = 'ricevuta';">Vai alla Ricevuta</button>
-
     <script src="script.js"></script>
     <script>
         window.addEventListener('hashchange', () => {
