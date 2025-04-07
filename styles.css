@@ -149,31 +149,38 @@ h2 {
     color: #fede00;
     font-weight: 600;
     margin: 0;
-    text-align: center;
+    
 }
 
 .ticket-validato .date-info-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Posiziona i blocchi agli estremi */
     align-items: center;
     width: 100%;
 }
 
-.ticket-validato .date-info {
+.validato-text {
+    flex: 1; /* Occupa lo spazio disponibile a sinistra */
+    text-align: left; /* Allinea la scritta "Validato" a sinistra */
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.date-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Aggiunge spazio tra "Fino al", "data", e "ora" */
     align-items: center;
-    flex: 3;
+    gap: 10px; /* Spaziatura dinamica tra gli elementi */
     font-size: 14px;
     color: #fff;
-    white-space: nowrap;
-    gap: 5px;
+    white-space: nowrap; /* Impedisce che il testo vada a capo */
     margin: 0;
     padding: 0;
+    flex: 2; /* Occupa più spazio a destra */
 }
 
 .date-info span {
-    flex: 1;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
