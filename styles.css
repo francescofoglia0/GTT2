@@ -137,43 +137,49 @@ h2 {
 .ticket-validato {
     background-color: #1a3e9e;
     margin-top: 10px;
-    color: #fede00; /* Cambia il colore del testo a giallo */
+    color: #fede00;
     padding: 12px 15px;
     display: flex;
-    flex-direction: column; /* Dispone gli elementi in colonna */
-    align-items: center; /* Centra gli elementi orizzontalmente */
+    align-items: center; /* Allinea gli elementi verticalmente */
     border-radius: 0 0 10px 10px;
 }
 
 .ticket-validato h4 {
-    font-size: 20px;
-    color: #fede00; /* Cambia il colore del testo a giallo */
+    font-size: 16px;
+    color: #fede00;
     font-weight: 600;
     margin: 0;
-    margin-bottom: 10px; /* Spazio sotto il titolo */
+    text-align: center;
+}
+
+.ticket-validato .date-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .ticket-validato .date-info {
     display: flex;
-    justify-content: space-between; /* Distribuisce gli elementi in modo uniforme */
-    align-items: center; /* Allinea verticalmente gli elementi */
-    width: 100%; /* Occupa tutta la larghezza disponibile */
+    justify-content: space-between;
+    align-items: center;
+    flex: 3;
     font-size: 14px;
     color: #fff;
-    white-space: nowrap; /* Impedisce che il testo vada a capo */
-    gap: 5px; /* Spaziatura dinamica tra gli elementi */
-    margin: 0; /* Rimuove margini inutili */
-    padding: 0; /* Rimuove padding inutili */
+    white-space: nowrap;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
 }
 
 .date-info span {
-    flex: 1; /* Gli elementi occupano lo stesso spazio */
-    text-align: center; /* Centra il testo */
-    white-space: nowrap; /* Impedisce che il testo vada a capo */
-    overflow: hidden; /* Nasconde il contenuto in eccesso */
-    text-overflow: ellipsis; /* Aggiunge "..." se il contenuto è troppo lungo */
-    margin: 0; /* Rimuove margini tra gli elementi */
-    padding: 0; /* Rimuove padding tra gli elementi */
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    padding: 0;
 }
 
 .fino-al {
