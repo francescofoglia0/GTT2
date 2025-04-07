@@ -160,36 +160,27 @@ h2 {
     width: 100%; /* Occupa tutta la larghezza disponibile */
     font-size: 14px;
     color: #fff;
+    white-space: nowrap; /* Impedisce che il testo vada a capo */
 }
 
 .date-info span {
     flex: 1; /* Gli elementi occupano lo stesso spazio */
     text-align: center; /* Centra il testo */
     white-space: nowrap; /* Impedisce che il testo vada a capo */
+    overflow: hidden; /* Nasconde il contenuto in eccesso */
+    text-overflow: ellipsis; /* Aggiunge "..." se il contenuto è troppo lungo */
 }
 
 .fino-al {
     font-weight: 100;
-    margin-top: 5px;
     font-size: 10px;
-    white-space: nowrap; /* Impedisce la divisione del testo su più righe */
 }
-
 
 .data, .ora {
     font-weight: 400;
+    font-size: 15px;
 }
 
-/* Riduci la dimensione del font per "Fino al" */
-.fino-al {
-    font-size: 10px; /* Mantieni la dimensione del font uniforme */
-}
-
-.data, .ora {
-    font-size: 15px; /* Mantieni la dimensione del font uniforme */
-}
-
-/* Contenitore per lo sfondo bianco */
 /* Contenitore per lo sfondo bianco */
 .acquista-button-wrapper {
     position: fixed;
