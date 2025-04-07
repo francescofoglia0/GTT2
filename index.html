@@ -97,12 +97,28 @@
     
     <script src="script.js"></script>
     <script>
+        function aggiornaData() {
+            const now = new Date();
+            const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+            const dataAcquisto = now.toLocaleDateString('it-IT', options);
+    
+            const dataAcquistoElement = document.getElementById('dataAcquisto');
+            if (dataAcquistoElement) {
+                dataAcquistoElement.textContent = dataAcquisto;
+            } else {
+                console.error("Elemento con ID 'dataAcquisto' non trovato.");
+            }
+        }
+    
         window.addEventListener('hashchange', () => {
             if (location.hash === '#ricevuta') {
                 fetch('ricevuta.html')
                     .then(response => response.text())
                     .then(html => {
                         document.body.innerHTML = html;
+    
+                        // Chiama la funzione per aggiornare la data dopo aver caricato il contenuto
+                        aggiornaData();
                     })
                     .catch(error => console.error('Errore nel caricamento della pagina Ricevuta:', error));
             }
