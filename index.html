@@ -60,9 +60,6 @@
                 </div>                                
             </div>
         </section>
-        <div id="contenuto">
-            <!-- Il contenuto della schermata principale verrà caricato qui -->
-        </div>
     </main>
 
     <footer>
@@ -100,56 +97,16 @@
     
     <script src="script.js"></script>
     <script>
-        // Funzione per gestire la navigazione basata su hash
-        function gestisciNavigazione() {
-            const hash = location.hash;
-    
-            if (hash === '#ricevuta') {
-                // Carica dinamicamente la schermata "Ricevuta"
+        window.addEventListener('hashchange', () => {
+            if (location.hash === '#ricevuta') {
                 fetch('ricevuta.html')
                     .then(response => response.text())
                     .then(html => {
-                        document.getElementById('contenuto').innerHTML = html;
+                        document.body.innerHTML = html;
                     })
                     .catch(error => console.error('Errore nel caricamento della pagina Ricevuta:', error));
-            } else {
-                // Torna alla schermata principale
-                document.getElementById('contenuto').innerHTML = `
-                    <section id="bigliettiDisponibili">
-                        <h2>BIGLIETTO SCELTO</h2>
-                        <div class="ticket-card">
-                            <!-- Contenuto della schermata principale -->
-                            <div class="ticket-info">
-                                <div class="info-header">
-                                    <h3>City</h3>
-                                    <button id="infoButtonImage" class="info-button-image">
-                                        <img src="path-to-your-info-button-image.jpg" alt="Info">
-                                    </button>
-                                </div>
-                                <div class="ticket-content">
-                                    <img src="ticket-image.jpg" alt="Biglietto City">
-                                    <button onclick="location.hash = 'ricevuta';" id="buttonImage" class="button-image">
-                                        <img src="path-to-your-button-image.jpg" alt="Pulsante">
-                                    </button>
-                                    <div class="tornello-text">
-                                        <p class="bippami-text">
-                                            Bippami al validatore o al<br>
-                                            <span class="bippami-text">tornello</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                `;
             }
-        }
-    
-        // Aggiungi un listener per il cambiamento dell'hash
-        window.addEventListener('hashchange', gestisciNavigazione);
-    
-        // Carica la schermata iniziale
-        window.onload = gestisciNavigazione;
+        });
     </script>
 </body>
 </html>
